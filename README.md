@@ -11,5 +11,3 @@ This is C Notes
 ## makefile
 
 ## 数据结构
-
-## a
