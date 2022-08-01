@@ -62,7 +62,7 @@ int sqlist_find(sqlist *me, datatype *data)
         return -1;
     for(int i = 0; i <= me->last; i++)
     {
-        if(me->data[i] = *data)
+        if(me->data[i] == *data)
             return i;
     }
     return -2;
@@ -108,7 +108,7 @@ int sqlist_union(sqlist *me1, sqlist *me2)
 {
     for(int i = 0; i <= me2->last; i++)
     {
-        if((sqlist_find(me1, &me2->data[i])) < 0)
+        if(sqlist_find(me1, &me2->data[i]) < 0)
             sqlist_insert(me1, 0, &me2->data[i]);
     }
     return 0;
