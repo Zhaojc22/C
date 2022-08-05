@@ -2,7 +2,7 @@
  * @Author: Zhaojc
  * @Date: 2022-08-05 14:12:30
  * @LastEditTime: 2022-08-05 14:31:14
- * @Descripttion: your project
+ * @Descripttion: 检查输入的用户密码是否正确，用户由命令行输入;如 ./chkpass zhaoja
  */
 #include <stdio.h>
 #include <stdlib.h>

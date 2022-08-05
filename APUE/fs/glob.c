@@ -3,7 +3,40 @@
  * @Date: 2022-08-04 17:24:09
  * @LastEditTime: 2022-08-05 09:20:57
  * @Descripttion: glob函数 解析模式/通配符
+ * 
  */
+#if 0
+NAME
+       glob, globfree - find pathnames matching a pattern, free memory from glob()
+
+SYNOPSIS
+       #include <glob.h>
+
+       int glob(const char *pattern, int flags,
+                int (*errfunc) (const char *epath, int eerrno),
+                glob_t *pglob);
+       void globfree(glob_t *pglob);
+
+        typedef struct {
+               size_t   gl_pathc;    /* Count of paths matched so far  */
+               char   **gl_pathv;    /* List of matched pathnames.  */
+               size_t   gl_offs;     /* Slots to reserve in gl_pathv.  */
+           } glob_t;
+...
+RETURN VALUE
+       On successful completion, glob() returns zero.  Other possible returns are:
+
+       GLOB_NOSPACE = 1
+              for running out of memory, 
+
+       GLOB_ABORTED = 2
+              for a read error, and
+
+       GLOB_NOMATCH = 3
+              for no found matches.
+#endif
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
